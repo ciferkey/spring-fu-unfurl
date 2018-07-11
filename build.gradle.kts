@@ -18,6 +18,7 @@ dependencyManagement {
 dependencies {
 	implementation("org.springframework.fu.module:spring-fu-logging-logback")
 	implementation("org.springframework.fu.module:spring-fu-webflux-netty")
+	compile("org.jsoup:jsoup:1.8.3")
 	testImplementation("org.springframework.fu.module:spring-fu-test")
 }
 
@@ -32,8 +33,4 @@ tasks.withType<KotlinCompile> {
 		jvmTarget = "1.8"
 		freeCompilerArgs = listOf("-Xjsr305=strict", "-Xjvm-default=enable")
 	}
-}
-
-tasks.withType<Test> {
-	useJUnitPlatform()
 }

@@ -1,0 +1,2 @@
+Changed kotlin compiler version from to in order to avoid a [regression](https://discuss.kotlinlang.org/t/kotlin-1-2-50-causing-java-lang-illegalstateexception-scriptingcompilerconfigurationcomponentregistrar-is-not-compatible-with-this-version-of-compiler/8157/16
+).
