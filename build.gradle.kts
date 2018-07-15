@@ -4,7 +4,7 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 plugins {
 	// Had to downgrade kotlin compiler version:
 	// https://discuss.kotlinlang.org/t/kotlin-1-2-50-causing-java-lang-illegalstateexception-scriptingcompilerconfigurationcomponentregistrar-is-not-compatible-with-this-version-of-compiler/8157/16
-	id("org.jetbrains.kotlin.jvm") version "1.2.41"
+	id("org.jetbrains.kotlin.jvm") version "1.2.51"
 	id("io.spring.dependency-management") version "1.0.5.RELEASE"
 	id("org.springframework.boot") version "2.0.3.RELEASE"
 }
