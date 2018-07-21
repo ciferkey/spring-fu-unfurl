@@ -27,10 +27,7 @@ val app = application {
 			codecs {
 				jackson()
 			}
-			router {
-				val urlHandler = ref<UrlHandler>()
-				GET("/unfurl/{url}", urlHandler::unfurl)
-			}
+			include { routes(ref()) }
 		}
 	}
 }
