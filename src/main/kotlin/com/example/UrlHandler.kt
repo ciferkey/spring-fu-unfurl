@@ -6,6 +6,7 @@ import reactor.core.publisher.Mono
 import java.net.URLDecoder
 import org.jsoup.Jsoup
 import org.jsoup.nodes.Document
+import org.springframework.http.MediaType
 import java.nio.charset.StandardCharsets
 
 /**
@@ -28,7 +29,9 @@ class UrlHandler(private val urlDecoder: URLDecoder) {
 
         val result = defaultExtract(document)
 
-        return ServerResponse.ok().syncBody(result.toString())
+        return ServerResponse.ok()
+                .contentType(MediaType.APPLICATION_JSON_UTF8)
+                .syncBody(result)
     }
 
     fun defaultExtract(document: Document): Result {

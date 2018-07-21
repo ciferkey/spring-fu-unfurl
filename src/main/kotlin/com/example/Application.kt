@@ -6,6 +6,7 @@ import org.springframework.fu.module.logging.logback.logback
 import org.springframework.fu.module.logging.logback.debug
 import org.springframework.fu.module.logging.logback.consoleAppender
 import org.springframework.fu.module.logging.logback.rollingFileAppender
+import org.springframework.fu.module.webflux.jackson.jackson
 import org.springframework.fu.module.webflux.netty.netty
 import org.springframework.fu.module.webflux.webflux
 import org.springframework.fu.ref
@@ -23,6 +24,9 @@ val app = application {
 	webflux {
 		val port = if (profiles.contains("test")) 8181 else 8080
 		server(netty(port)) {
+			codecs {
+				jackson()
+			}
 			router {
 				val urlHandler = ref<UrlHandler>()
 				GET("/unfurl/{url}", urlHandler::unfurl)
