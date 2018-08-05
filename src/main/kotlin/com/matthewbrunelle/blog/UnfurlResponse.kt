@@ -1,4 +1,4 @@
-package com.example
+package com.matthewbrunelle.blog
 
 data class UnfurlResponse(
         val title: String,

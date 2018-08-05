@@ -1,4 +1,4 @@
-package com.example
+package com.matthewbrunelle.blog
 
 import org.springframework.web.reactive.function.server.ServerRequest
 import org.springframework.web.reactive.function.server.ServerResponse
@@ -19,7 +19,7 @@ class UrlHandler(private val urlDecoder: URLDecoder) {
         val document = Jsoup.connect(url).get()
 
         // TODO: url matching -> correct extractor
-        // twitter, instagram, youtube
+        // instagram, youtube
 
         val result = openGradeExtract(document)
                 ?: defaultExtract(document)

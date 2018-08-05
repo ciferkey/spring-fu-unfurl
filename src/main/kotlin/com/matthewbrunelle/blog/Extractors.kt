@@ -1,4 +1,4 @@
-package com.example
+package com.matthewbrunelle.blog
 
 import org.jsoup.nodes.Document
 

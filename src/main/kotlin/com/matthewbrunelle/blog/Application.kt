@@ -1,4 +1,4 @@
-package com.example
+package com.matthewbrunelle.blog
 
 import org.springframework.fu.application
 import org.springframework.fu.module.logging.*
